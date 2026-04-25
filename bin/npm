@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ "$1" = "config" ] && [ "$2" = "get" ] && [ "$3" = "registry" ]; then
+  echo "https://registry.npmjs.org/"
+  exit 0
+fi
+
+echo "This local npm shim only supports 'npm config get registry'." >&2
+exit 1
